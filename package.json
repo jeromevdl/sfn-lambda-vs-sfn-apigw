@@ -1,0 +1,46 @@
+{
+  "name": "sfn-lambda-vs-sfn-apigw",
+  "version": "0.1.0",
+  "bin": {
+    "sfn-lambda-vs-sfn-apigw": "bin/sfn-lambda-vs-sfn-apigw.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "lint": "eslint '{bin,lib}/**/*.{js,ts}' --quiet --fix"
+  },
+  "devDependencies": {
+    "@aws-cdk/assertions": "1.130.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "aws-cdk": "1.130.0",
+    "eslint": "^8.0.1",
+    "eslint-config-cdk": "^1.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^26.4.2",
+    "prettier": "^2.4.1",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.130.0",
+    "@aws-cdk/aws-apigatewayv2": "^1.130.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.130.0",
+    "@aws-cdk/aws-iam": "^1.130.0",
+    "@aws-cdk/aws-lambda": "^1.130.0",
+    "@aws-cdk/aws-lambda-python": "^1.130.0",
+    "@aws-cdk/aws-logs": "^1.130.0",
+    "@aws-cdk/aws-stepfunctions": "^1.130.0",
+    "@aws-cdk/aws-stepfunctions-tasks": "^1.130.0",
+    "@aws-cdk/core": "1.130.0",
+    "source-map-support": "^0.5.16"
+  }
+}
