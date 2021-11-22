@@ -89,7 +89,7 @@ export class SfnLambdaVsSfnApigwStack extends cdk.Stack {
       method: HttpMethod.GET,
       apiPath: '/search',
       queryParameters: TaskInput.fromObject({
-        'q.$': 'States.Array($.road)',
+        'q.$': 'States.Array($.street)',
         'postcode.$': 'States.Array($.postalcode)',
         autocomplete: ['0'],
         limit: ['1'],
@@ -112,7 +112,7 @@ export class SfnLambdaVsSfnApigwStack extends cdk.Stack {
             ),
             new Pass(this, 'ReformatOutput', {
               parameters: {
-                'road.$': '$.road',
+                'street.$': '$.street',
                 'city.$': '$.city',
                 'postalcode.$': '$.postalcode',
                 'address.$': '$.addresscheck.result[0].properties.label',

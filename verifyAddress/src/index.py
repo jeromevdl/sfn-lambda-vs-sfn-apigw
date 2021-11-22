@@ -27,7 +27,7 @@ def handler(event, _):
     response = None
     try:
         response = requests.get(ADDRESS_API, params={
-            'q': event['road'] + ' ' + event['city'],
+            'q': event['street'] + ' ' + event['city'],
             'autocomplete': '0',
             'postcode': event['postalcode'],
             'limit': '1'

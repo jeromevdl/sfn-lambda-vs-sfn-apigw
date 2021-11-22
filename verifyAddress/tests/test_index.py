@@ -39,7 +39,7 @@ class VerifyAddressTest(TestCase):
                         ]
                     }, status=200)
         result = index.handler({
-            "road": "8 Boulevard du Port",
+            "street": "8 Boulevard du Port",
             "postalcode": "80000",
             "city": "Amiens"
         }, None)
@@ -61,7 +61,7 @@ class VerifyAddressTest(TestCase):
                     }, status=200)
         with pytest.raises(ValueError, match=r"Address is incorrect.*"):
             index.handler({
-                "road": "8 Boulevard du Port",
+                "street": "8 Boulevard du Port",
                 "postalcode": "80000",
                 "city": "Amiens"
             }, None)
@@ -74,7 +74,7 @@ class VerifyAddressTest(TestCase):
                     }, status=200)
         with pytest.raises(ValueError, match=r"Address is incorrect.*"):
             index.handler({
-                "road": "8 Boulevard du Port",
+                "street": "8 Boulevard du Port",
                 "postalcode": "80000",
                 "city": "Amiens"
             }, None)
@@ -86,7 +86,7 @@ class VerifyAddressTest(TestCase):
                     body=Exception('Connection Error'))
         with pytest.raises(RuntimeError, match=r"Request Error.*"):
             index.handler({
-                "road": "8 Boulevard du Port",
+                "street": "8 Boulevard du Port",
                 "postalcode": "80000",
                 "city": "Amiens"
             }, None)
@@ -107,7 +107,7 @@ class VerifyAddressTest(TestCase):
                         ]
                     }, status=200)
         result = index.handler({
-            "road": "8 Boulevard du Port",
+            "street": "8 Boulevard du Port",
             "postalcode": "80000",
             "city": "Amiens"
         }, None)
